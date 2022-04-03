@@ -1,0 +1,123 @@
+html {
+  --color-gray-100: rgb(236, 236, 236);
+  --color-gray-400: rgb(134, 134, 134);
+  --color-gray-600: rgb(58, 58, 58);
+  --color-grey-900: rgb(41, 41, 41);
+  /* We use css variables to make it easier to code repetitive css values. */
+  /* This is also known as a "custom css property". */
+  /* So instead of writing the same value over and over again, we can create a css 
+  variable for that value and call that value whenever we want. */
+  /* Typically, we add these css variables inside the "html" element. */
+  /* Theres a standard way of writing such a css variable. */
+  /* This is not mandatory, but it's better to use this format when we name css variables. */
+  /* First We declare css variables by using -- in the beginning. */
+  /* Then we add the css property we need. */
+  /* After that we can specify what this custom property is all about */
+  /* In here this custom css property is all about defining different values for
+  different gray colors used in this project. */
+  /* After that we need to enter a number that we think is suitable. */
+  /* We write a number between 50 and 900 here. */
+  /* If the number is a lower value, that means that the color is a lighter gray value. */
+  /* If the number is a high value, that means that the color is a higher gray value. */
+  /* Now if we ever want to change some value of a color, we only need to change that in
+  this custom css property. Then all places where this custom css property applied
+  automatically changes. */
+
+  --color-primary-300: rgb(167, 226, 255);
+  --color-primary-700: rgb(0, 170, 255);
+
+  --size-1: 18px;
+  --size-5: 50px;
+  /* These are css variables used to define size values. */
+  /* We typically use numbers like 1, 2, 3 when we write
+  css variables to define different sizes. */
+
+  background-color: var(--color-gray-100);
+  /* This is how we call out a css variable. */
+  
+  font-family: "Krub", sans-serif;
+  font-weight: 400;
+}
+
+.card-container {
+  background-color: rgb(255, 255, 255);
+  width: 350px;
+  margin: 50px auto;
+  box-shadow: 3px 3px 10px rgb(201, 200, 200);
+}
+
+h1 {
+  color: var(--color-gray-600);
+  text-align: left;
+  padding: 30px 50px 0px 50px;
+  margin: 10px 0;
+  font-family: "Zilla Slab", serif;
+  font-weight: 600;
+}
+
+.card-info {
+  color: var(--color-gray-400);
+  text-align: left;
+  padding: 0 50px;
+  margin: 10px 0 30px 0;
+}
+
+.price {
+  color: var(--color-grey-900);
+  background-color: var(--color-primary-300);
+  text-align: center;
+  margin: 30px auto 10px auto;
+  font-size: var(--size-5);
+  font-weight: 600;
+}
+
+.price-info {
+  color: var(--color-gray-400);
+  text-align: center;
+  margin: 10px 0 30px 0;
+  padding: 0 50px;
+}
+
+.sub-details {
+  width: 300px;
+  margin: 30px 50px;
+}
+
+.sub-feature {
+  display: flex;
+}
+
+.icon {
+  display: flex;
+  width: 10px;
+}
+
+.sub-feature-text {
+  color: var(--color-gray-600);
+  padding: 2px;
+  margin: 5px;
+}
+
+.button-container {
+  text-align: center;
+  margin: 30px 0 0 0;
+}
+
+.button {
+  color: var(--color-primary-700);
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  width: 70%;
+  padding: 10px;
+  margin: 0 0 30px 0;
+  border: 2px solid rgb(224, 224, 224);
+  font-size: var(--size-1);
+  font-weight: 600;
+}
+
+.button:hover {
+  color: white;
+  background-color: var(--color-primary-700);
+  border: 2px solid rgb(255, 255, 255);
+}
