@@ -34,7 +34,7 @@ html {
 
   background-color: var(--color-gray-100);
   /* This is how we call out a css variable. */
-  
+
   font-family: "Krub", sans-serif;
   font-weight: 400;
 }
@@ -44,6 +44,46 @@ html {
   width: 350px;
   margin: 50px auto;
   box-shadow: 3px 3px 10px rgb(201, 200, 200);
+
+  transition: transform 0.5s ease-out 1s;
+  /* This is a css transition. This is how we define how the 
+  css transformations changes it's behaviors from the initial 
+  stage to the transformed stage. */
+  /* Transitions should be added to the initial stage of the 
+  element. Which means we cannot add the css transition
+  inside .card-container:hover */
+  /* Instead we need to add the css transition inside
+  .card-container */
+
+  /* transition: transform 0.5s ease-out 1s; */
+  /* in this code, transform is known as a property. */
+  /* 0.5s is the duration. This defines how long does
+  the transformation takes place. */
+  /* ease-out is a timing function. ease-out simply
+  means that the transition starts fast and ends slowly. */
+  /* 1s is the delay. It tells how long it takes
+  for the transformation to "begin". */
+
+  /* transition: background-color 0.5s ease-in-out 1s; */
+  /* This transition is applied to the color defined inside
+  .card-container:hover */
+  /* So when we hover over the .card-container,
+  the change of the background-color: rgb(224, 246, 253); take place 
+  according to the transition rules defined in here. */
+}
+
+.card-container:hover {
+  transform: scale(1.1);
+  /* This is a css transformation. This means that when we hover over this 
+  card, the size of the card get increased by 10%. */
+  /* This css transformations should be applied to the "event" triggering
+  the transformation. Which in this case is "hovering" over it. */
+
+  /* transform: rotate(180deg); */
+  /* This is also a css transformation. This means that when we hover over this 
+  card, the card get rotated by 180 degrees. */
+
+  /* background-color: rgb(224, 246, 253); */
 }
 
 h1 {
@@ -54,6 +94,13 @@ h1 {
   font-family: "Zilla Slab", serif;
   font-weight: 600;
 }
+
+h1:hover {
+  transform: scale(1.05);
+}
+/* h1 is nested "inside" the .card-container */
+/* So any transition applied to .card-container also applies to h1 element. */
+/* So transition: transform 0.5s ease-out 1s; is also applied to h1 automatically. */
 
 .card-info {
   color: var(--color-gray-400);
@@ -114,6 +161,7 @@ h1 {
   border: 2px solid rgb(224, 224, 224);
   font-size: var(--size-1);
   font-weight: 600;
+  transition: background-color 0.5s ease-out;
 }
 
 .button:hover {
